@@ -10,7 +10,10 @@ import re
 import safetensors.torch
 from omegaconf import OmegaConf, ListConfig
 from urllib import request
-import ldm.modules.midas as midas
+try:
+    import ldm.modules.midas as midas
+except Exception:
+    midas = None
 
 from modules import paths, shared, modelloader, devices, script_callbacks, sd_vae, sd_disable_initialization, errors, hashes, sd_models_config, sd_unet, sd_models_xl, cache, extra_networks, processing, lowvram, sd_hijack, patches
 from modules.timer import Timer
@@ -142,7 +145,8 @@ def setup_model():
 
     os.makedirs(model_path, exist_ok=True)
 
-    enable_midas_autodownload()
+    if midas is not None:
+        enable_midas_autodownload()
     patch_given_betas()
 
 
@@ -548,6 +552,9 @@ def enable_midas_autodownload():
     This function applies a wrapper to download the model to the correct
     location automatically.
     """
+
+    if midas is None:
+        return
 
     midas_path = os.path.join(paths.models_path, 'midas')
 

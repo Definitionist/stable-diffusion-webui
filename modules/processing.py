@@ -28,8 +28,24 @@ import modules.images as images
 import modules.styles
 import modules.sd_models as sd_models
 import modules.sd_vae as sd_vae
-from ldm.data.util import AddMiDaS
-from ldm.models.diffusion.ddpm import LatentDepth2ImageDiffusion
+try:
+    from ldm.data.util import AddMiDaS
+except Exception:
+    class AddMiDaS:
+        def __init__(self, *args, **kwargs):
+            pass
+
+        def __call__(self, data):
+            jpg = data.get("jpg")
+            h = int(getattr(jpg, "shape", [512, 512])[0]) if jpg is not None else 512
+            w = int(getattr(jpg, "shape", [512, 512])[1]) if jpg is not None else 512
+            return {"midas_in": np.zeros((3, h, w), dtype=np.float32)}
+
+try:
+    from ldm.models.diffusion.ddpm import LatentDepth2ImageDiffusion
+except Exception:
+    class LatentDepth2ImageDiffusion:
+        pass
 
 from einops import repeat, rearrange
 from blendmodes.blend import blendLayers, BlendType

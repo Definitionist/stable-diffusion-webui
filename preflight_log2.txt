@@ -1,0 +1,24 @@
+venv "C:\stable-diffusion-webui\venv\Scripts\Python.exe"
+Python 3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]
+Version: v1.10.1
+Commit hash: 82a973c04367123ae98bd9abdf80d9eda9b910e2
+Fetching updates for Stable Diffusion...
+Traceback (most recent call last):
+  File "C:\stable-diffusion-webui\launch.py", line 48, in <module>
+    main()
+  File "C:\stable-diffusion-webui\launch.py", line 39, in main
+    prepare_environment()
+  File "C:\stable-diffusion-webui\modules\launch_utils.py", line 412, in prepare_environment
+    git_clone(stable_diffusion_repo, repo_dir('stable-diffusion-stability-ai'), "Stable Diffusion", stable_diffusion_commit_hash)
+  File "C:\stable-diffusion-webui\modules\launch_utils.py", line 185, in git_clone
+    run_git(dir, name, 'fetch', f"Fetching updates for {name}...", f"Couldn't fetch {name}", autofix=False)
+  File "C:\stable-diffusion-webui\modules\launch_utils.py", line 160, in run_git
+    return run(f'"{git}" -C "{dir}" {command}', desc=desc, errdesc=errdesc, custom_env=custom_env, live=live)
+  File "C:\stable-diffusion-webui\modules\launch_utils.py", line 116, in run
+    raise RuntimeError("\n".join(error_bits))
+RuntimeError: Couldn't fetch Stable Diffusion.
+Command: "git" -C "C:\stable-diffusion-webui\repositories\stable-diffusion-stability-ai" fetch
+Error code: 128
+stderr: fatal: unable to access 'https://github.com/CompVis/stable-diffusion.git /': URL rejected: Malformed input to a URL function
+
+Press any key to continue . . . 
