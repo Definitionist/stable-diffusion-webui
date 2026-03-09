@@ -1,0 +1,55 @@
+venv "C:\stable-diffusion-webui\venv\Scripts\Python.exe"
+Python 3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]
+Version: v1.10.1
+Commit hash: 82a973c04367123ae98bd9abdf80d9eda9b910e2
+Installing clip
+Traceback (most recent call last):
+  File "C:\stable-diffusion-webui\launch.py", line 48, in <module>
+    main()
+  File "C:\stable-diffusion-webui\launch.py", line 39, in main
+    prepare_environment()
+  File "C:\stable-diffusion-webui\modules\launch_utils.py", line 394, in prepare_environment
+    run_pip(f"install {clip_package}", "clip")
+  File "C:\stable-diffusion-webui\modules\launch_utils.py", line 144, in run_pip
+    return run(f'"{python}" -m pip {command} --prefer-binary{index_url_line}', desc=f"Installing {desc}", errdesc=f"Couldn't install {desc}", live=live)
+  File "C:\stable-diffusion-webui\modules\launch_utils.py", line 116, in run
+    raise RuntimeError("\n".join(error_bits))
+RuntimeError: Couldn't install clip.
+Command: "C:\stable-diffusion-webui\venv\Scripts\python.exe" -m pip install https://github.com/openai/CLIP/archive/d50d76daa670286dd6cacf3bcd80b5e4823fc8e1.zip --prefer-binary
+Error code: 1
+stdout: Collecting https://github.com/openai/CLIP/archive/d50d76daa670286dd6cacf3bcd80b5e4823fc8e1.zip
+  Using cached https://github.com/openai/CLIP/archive/d50d76daa670286dd6cacf3bcd80b5e4823fc8e1.zip (4.3 MB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'error'
+
+stderr:   error: subprocess-exited-with-error
+  
+  Getting requirements to build wheel did not run successfully.
+  exit code: 1
+  
+  [17 lines of output]
+  Traceback (most recent call last):
+    File "C:\stable-diffusion-webui\venv\lib\site-packages\pip\_vendor\pyproject_hooks\_in_process\_in_process.py", line 389, in <module>
+      main()
+    File "C:\stable-diffusion-webui\venv\lib\site-packages\pip\_vendor\pyproject_hooks\_in_process\_in_process.py", line 373, in main
+      json_out["return_val"] = hook(**hook_input["kwargs"])
+    File "C:\stable-diffusion-webui\venv\lib\site-packages\pip\_vendor\pyproject_hooks\_in_process\_in_process.py", line 143, in get_requires_for_build_wheel
+      return hook(config_settings)
+    File "C:\Users\Shadow\AppData\Local\Temp\pip-build-env-9lmwy79c\overlay\Lib\site-packages\setuptools\build_meta.py", line 333, in get_requires_for_build_wheel
+      return self._get_build_requires(config_settings, requirements=[])
+    File "C:\Users\Shadow\AppData\Local\Temp\pip-build-env-9lmwy79c\overlay\Lib\site-packages\setuptools\build_meta.py", line 301, in _get_build_requires
+      self.run_setup()
+    File "C:\Users\Shadow\AppData\Local\Temp\pip-build-env-9lmwy79c\overlay\Lib\site-packages\setuptools\build_meta.py", line 520, in run_setup
+      super().run_setup(setup_script=setup_script)
+    File "C:\Users\Shadow\AppData\Local\Temp\pip-build-env-9lmwy79c\overlay\Lib\site-packages\setuptools\build_meta.py", line 317, in run_setup
+      exec(code, locals())
+    File "<string>", line 3, in <module>
+  ModuleNotFoundError: No module named 'pkg_resources'
+  [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+ERROR: Failed to build 'https://github.com/openai/CLIP/archive/d50d76daa670286dd6cacf3bcd80b5e4823fc8e1.zip' when getting requirements to build wheel
+
+Press any key to continue . . . 

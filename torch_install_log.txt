@@ -1,0 +1,23 @@
+Looking in indexes: https://download.pytorch.org/whl/cu121
+Collecting torch==2.1.2+cu121
+  Using cached https://download.pytorch.org/whl/cu121/torch-2.1.2%2Bcu121-cp310-cp310-win_amd64.whl (2473.9 MB)
+Collecting torchvision==0.16.2+cu121
+  Using cached https://download.pytorch.org/whl/cu121/torchvision-0.16.2%2Bcu121-cp310-cp310-win_amd64.whl (5.6 MB)
+Requirement already satisfied: filelock in .\stable-diffusion-webui\venv\lib\site-packages (from torch==2.1.2+cu121) (3.25.0)
+Requirement already satisfied: typing-extensions in .\stable-diffusion-webui\venv\lib\site-packages (from torch==2.1.2+cu121) (4.15.0)
+Requirement already satisfied: sympy in .\stable-diffusion-webui\venv\lib\site-packages (from torch==2.1.2+cu121) (1.14.0)
+Requirement already satisfied: networkx in .\stable-diffusion-webui\venv\lib\site-packages (from torch==2.1.2+cu121) (3.4.2)
+Requirement already satisfied: jinja2 in .\stable-diffusion-webui\venv\lib\site-packages (from torch==2.1.2+cu121) (3.1.6)
+Requirement already satisfied: fsspec in .\stable-diffusion-webui\venv\lib\site-packages (from torch==2.1.2+cu121) (2026.2.0)
+Requirement already satisfied: numpy in .\stable-diffusion-webui\venv\lib\site-packages (from torchvision==0.16.2+cu121) (2.2.6)
+Requirement already satisfied: requests in .\stable-diffusion-webui\venv\lib\site-packages (from torchvision==0.16.2+cu121) (2.32.5)
+Requirement already satisfied: pillow!=8.3.*,>=5.3.0 in .\stable-diffusion-webui\venv\lib\site-packages (from torchvision==0.16.2+cu121) (12.1.1)
+Requirement already satisfied: MarkupSafe>=2.0 in .\stable-diffusion-webui\venv\lib\site-packages (from jinja2->torch==2.1.2+cu121) (3.0.3)
+Requirement already satisfied: charset_normalizer<4,>=2 in .\stable-diffusion-webui\venv\lib\site-packages (from requests->torchvision==0.16.2+cu121) (3.4.5)
+Requirement already satisfied: idna<4,>=2.5 in .\stable-diffusion-webui\venv\lib\site-packages (from requests->torchvision==0.16.2+cu121) (3.11)
+Requirement already satisfied: urllib3<3,>=1.21.1 in .\stable-diffusion-webui\venv\lib\site-packages (from requests->torchvision==0.16.2+cu121) (1.26.13)
+Requirement already satisfied: certifi>=2017.4.17 in .\stable-diffusion-webui\venv\lib\site-packages (from requests->torchvision==0.16.2+cu121) (2026.2.25)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in .\stable-diffusion-webui\venv\lib\site-packages (from sympy->torch==2.1.2+cu121) (1.3.0)
+Installing collected packages: torch, torchvision
+
+Successfully installed torch-2.1.2+cu121 torchvision-0.16.2+cu121

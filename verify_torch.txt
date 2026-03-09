@@ -1,0 +1,27 @@
+Traceback (most recent call last):
+  File "C:\Users\Shadow\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Users\Shadow\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "C:\stable-diffusion-webui\venv\lib\site-packages\pip\__main__.py", line 24, in <module>
+    sys.exit(_main())
+  File "C:\stable-diffusion-webui\venv\lib\site-packages\pip\_internal\cli\main.py", line 47, in main
+    from pip._internal.cli.autocompletion import autocomplete
+  File "C:\stable-diffusion-webui\venv\lib\site-packages\pip\_internal\cli\autocompletion.py", line 12, in <module>
+    from pip._internal.cli.main_parser import create_main_parser
+  File "C:\stable-diffusion-webui\venv\lib\site-packages\pip\_internal\cli\main_parser.py", line 11, in <module>
+    from pip._internal.build_env import get_runnable_pip
+  File "C:\stable-diffusion-webui\venv\lib\site-packages\pip\_internal\build_env.py", line 22, in <module>
+    from pip._internal.cli.spinners import open_rich_spinner, open_spinner
+  File "C:\stable-diffusion-webui\venv\lib\site-packages\pip\_internal\cli\spinners.py", line 22, in <module>
+    from pip._internal.utils.logging import get_console, get_indentation
+  File "C:\stable-diffusion-webui\venv\lib\site-packages\pip\_internal\utils\logging.py", line 32, in <module>
+    from pip._internal.utils.misc import StreamWrapper, ensure_dir
+  File "C:\stable-diffusion-webui\venv\lib\site-packages\pip\_internal\utils\misc.py", line 5, in <module>
+    import hashlib
+  File "C:\Users\Shadow\AppData\Local\Programs\Python\Python310\lib\hashlib.py", line 261, in <module>
+    globals()[__func_name] = __get_hash(__func_name)
+  File "C:\Users\Shadow\AppData\Local\Programs\Python\Python310\lib\hashlib.py", line 137, in __get_openssl_constructor
+    f(usedforsecurity=False)
+KeyboardInterrupt
+^C
