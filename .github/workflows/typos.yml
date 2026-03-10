@@ -1,0 +1,18 @@
+name: "Typos"
+
+on:
+  push:
+    branches: [master, dev]
+  pull_request:
+    branches: [master, dev]
+
+jobs:
+  typos:
+    name: Check for typos
+    runs-on: ubuntu-latest
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name != github.event.pull_request.base.repo.full_name
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      - name: Check for typos
+        uses: crate-ci/typos@v1.29.5
