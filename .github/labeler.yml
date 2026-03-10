@@ -1,0 +1,62 @@
+# Label configuration for actions/labeler
+# Labels are applied to PRs based on changed file paths
+
+python:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "modules/**/*.py"
+          - "scripts/**/*.py"
+          - "*.py"
+
+javascript:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "javascript/**/*.js"
+          - "*.js"
+
+ui:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "javascript/**"
+          - "html/**"
+          - "style.css"
+          - "script.js"
+
+api:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "modules/api/**"
+
+extensions:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "extensions-builtin/**"
+          - "modules/extensions.py"
+
+tests:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "test/**"
+          - "requirements-test.txt"
+
+documentation:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "**/*.md"
+          - "CHANGELOG.md"
+          - "LICENSE.txt"
+
+github-actions:
+  - changed-files:
+      - any-glob-to-any-file:
+          - ".github/**"
+
+configuration:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "pyproject.toml"
+          - "package.json"
+          - "requirements*.txt"
+          - ".eslintrc.js"
+          - "_typos.toml"
+          - "configs/**"
